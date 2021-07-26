@@ -22,7 +22,7 @@
             </div>
             <div class="calculator-body">
                 <div class="calculator-left">
-                    <div class="slider-group">
+                    <div class="slider-group calculator-left-item">
                         <form class="slider-parameter">
                             <div class="slider-title">Loan amount</div>
                             <div class="slider-price">
@@ -62,7 +62,31 @@
                                 </div>
                             </div>
                         </div>
-                        <input type="button" class="slider-submit" value="Submit values">
+                        <input type="button" class="submit-button" value="Submit for calculation">
+                    </div>
+                    <div class="payment-info  calculator-left-item">
+
+                        <div class="payment-info-message payment-info-item">
+                            In order to be debt free you need to make a minimum monthly payment of <span>$654,40</span> during next <span>74</span> months
+                        </div>
+
+                        <form class="payment-info-form payment-info-item">
+                            <input type="number" placeholder="0,00" step=".01">
+                            <input type="button" class="submit-button" value="Submit payment">
+                        </form>
+
+                        <div class="payments-list payment-info-item">
+                            <div class="payments-table-heading">
+                                <div class="payment-table-date">Date</div>
+                                <div class="payment-table-date">Amount</div>
+                                <div class="payment-table-date">Interest</div>
+                                <div class="payment-table-date">Principal</div>
+                            </div>
+                            <div class="payment-item">
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
                 <div class="calculator-right">
@@ -82,7 +106,7 @@
                             <div class="data-info-stats data-info-item">
                                 <div class="stats-item">
                                     <div class="stats-item-header">
-                                        Loan
+                                        Balance
                                     </div>
                                     <div class="stats-item-value">
                                         120000
@@ -122,5 +146,6 @@
 <!--            </div>-->
         </div>
     </div>
+
 </body>
 </html>
