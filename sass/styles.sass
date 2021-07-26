@@ -6,22 +6,19 @@
 html, body
   height: 100%
   width: 100%
-  background: linear-gradient(-45deg, #9965F6 0%, #A79EF2 45%, #BFD3F2 100%)
-  display: flex
-  align-items: center
-  justify-content: center
+
+body
+  background: linear-gradient(-45deg, #9965F6 0%, #A79EF2 45%, #BFD3F2 100%) fixed
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif
+  padding-bottom: 60px
 
 .content-wrapper
+  margin: 0 auto
   width: 964px
-  //display: flex
-  //justify-content: center
-  //align-items: center
-  //margin: 60px 0
 
 .calculator-wrapper
+  margin: 60px auto
   width: 100%
-  height: 600px
   background: #E5ECF8
   box-shadow: 0 10px 50px 0 rgba(0, 0, 150, .25)
   border-radius: 15px
@@ -39,28 +36,100 @@ html, body
     text-transform: uppercase
     color: #2D6DED
     box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, .05)
+  .heading
+    padding: 60px
+    width: 100%
+    font-size: 22px
+    color: #475862
+    text-transform: uppercase
+    font-weight: 500
+    display: flex
+    flex-direction: column
+    span
+      margin-top: 7px
+      font-size: 14px
+      color: #AFB8BE
+      font-weight: normal
+      text-transform: none
   .calculator-body
     width: 100%
     height: auto
-    padding: 60px
+    padding: 0 60px 120px
     display: flex
     .calculator-left
-      .heading
-        font-size: 22px
-        color: #475862
-        text-transform: uppercase
-        font-weight: 500
-        display: flex
-        flex-direction: column
-        span
-          margin-top: 7px
-          font-size: 14px
-          color: #AFB8BE
-          font-weight: normal
-          text-transform: none
+      display: flex
+      flex-direction: column
+      width: 400px
     .calculator-right
       background: #FFFFFF
       box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, .05)
       border-radius: 20px
       min-height: 100px
-      max-width: 300px
+      width: 400px
+      margin-left: auto
+      height: max-content
+  .calculator-footer
+    min-height: 60px
+    background: #FFFFFF
+    border-bottom-left-radius: 15px
+    border-bottom-right-radius: 15px
+    padding-left: 60px
+    font-size: 16px
+    box-shadow: 0px -10px 25px 0px rgba(0, 0, 150, .05)
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+
+.slider-group
+  width: 100%
+  display: flex
+  flex-direction: column
+  .slider-submit
+    padding: 20px
+    background-color: #9965F5
+    color: #FFFFFF
+    border: none
+    outline: none
+    box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, .05)
+    border-radius: 20px
+    font-weight: bold
+    width: max-content
+    margin-top: 30px
+  .slider-parameter
+    display: flex
+    flex-direction: column
+    margin-bottom: 30px
+    .slider-title
+      font-weight: 600
+      font-size: 14px
+      color: #8A98A0
+      margin-bottom: 7px
+    .slider-price
+      font-weight: 700
+      margin-bottom: 0
+      color: #465761
+      .measure
+        font-size: 14px
+        position: relative
+        bottom: 14px
+      .value
+        font-size: 28px
+        margin-left: 14px
+    .slider
+      input[type='range']
+        width: 100%
+        height: 2px
+        background-color: #8A98A0
+        border: none
+        outline: none
+      .range-values
+        display: flex
+        justify-content: space-between
+        color: #AFB8BE
+        font-size: 12px
+        margin-top: 7px
+        font-weight: 600
+
+.info-group
+
