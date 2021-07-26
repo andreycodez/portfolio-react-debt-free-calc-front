@@ -211,7 +211,17 @@ body {
 
 .payments-list .payments-table-heading {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  margin-bottom: 20px; }
+.payments-list .payments {
+  display: flex;
+  flex-direction: column; }
+  .payments-list .payments .payment-detail:not(:last-child) {
+    margin-bottom: 20px; }
+  .payments-list .payments .payment-detail {
+    display: flex;
+    justify-content: space-between;
+    color: #596B75; }
 
 .divider {
   height: 30px; }
