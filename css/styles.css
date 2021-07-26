@@ -213,4 +213,7 @@ body {
   display: flex;
   justify-content: space-between; }
 
+.divider {
+  height: 30px; }
+
 /*# sourceMappingURL=styles.css.map */
