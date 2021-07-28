@@ -71,7 +71,14 @@
                         </div>
 
                         <form class="payment-info-form payment-info-item">
-                            <input type="number" placeholder="0,00" min="0" step=".05">
+                            <div class="payment-amount correct">
+                                <input type="number" placeholder="0,00" min="0" step=".05" value="423.5">
+                            </div>
+                            <div class="payment-amount incorrect">
+                                <input type="number" min="0" placeholder="0,00" step=".05" value="214.30">
+                                <span>The value is less than a least monthly payment <br /><a href="">Pay min amount</a></span>
+                            </div>
+
                             <input type="button" class="submit-button" value="Submit payment">
                         </form>
 

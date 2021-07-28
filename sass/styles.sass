@@ -200,18 +200,34 @@ body
   .payment-info-form
     display: flex
     flex-direction: column
-    input[type="number"]
-      height: 50px
-      width: 100%
-      border: none
-      outline: none
-      border-radius: 14px
-      padding: 0 30px
-      font-size: 16px
-      color: #596B75
-      box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, .05)
-    input[type="button"]
-      margin-top: 30px
+    .payment-amount:not(:last-child)
+      padding-bottom: 30px
+    .payment-amount
+      input[type="number"]
+        height: 50px
+        width: 100%
+        border: none
+        outline: none
+        border-radius: 14px
+        padding: 0 30px
+        font-size: 16px
+        color: #596B75
+        box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, .05)
+      input[type="button"]
+        margin-top: 30px
+    .payment-amount.incorrect
+      display: flex
+      flex-direction: column
+      input[type="number"]
+        background-color: #FBE6EB
+        color: #C2625F
+        margin-bottom: 7px
+      span
+        font-size: 12px
+        color: #C2625F
+        padding-left: 30px
+        a
+          color: #9965F5
 
 .payments-list
   .payments-table-heading

@@ -197,7 +197,9 @@ body {
   .payment-info .payment-info-form {
     display: flex;
     flex-direction: column; }
-    .payment-info .payment-info-form input[type="number"] {
+    .payment-info .payment-info-form .payment-amount:not(:last-child) {
+      padding-bottom: 30px; }
+    .payment-info .payment-info-form .payment-amount input[type="number"] {
       height: 50px;
       width: 100%;
       border: none;
@@ -207,8 +209,21 @@ body {
       font-size: 16px;
       color: #596B75;
       box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, 0.05); }
-    .payment-info .payment-info-form input[type="button"] {
+    .payment-info .payment-info-form .payment-amount input[type="button"] {
       margin-top: 30px; }
+    .payment-info .payment-info-form .payment-amount.incorrect {
+      display: flex;
+      flex-direction: column; }
+      .payment-info .payment-info-form .payment-amount.incorrect input[type="number"] {
+        background-color: #FBE6EB;
+        color: #C2625F;
+        margin-bottom: 7px; }
+      .payment-info .payment-info-form .payment-amount.incorrect span {
+        font-size: 12px;
+        color: #C2625F;
+        padding-left: 30px; }
+        .payment-info .payment-info-form .payment-amount.incorrect span a {
+          color: #9965F5; }
 
 .payments-list .payments-table-heading {
   display: grid;
