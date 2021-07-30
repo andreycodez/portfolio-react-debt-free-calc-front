@@ -90,12 +90,13 @@ body
   color: #FFFFFF
   border: none
   outline: none
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, .05)
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 150, .05)
   border-radius: 10px
   font-weight: bold
   font-size: 16px
   width: max-content
   margin-top: 30px
+  cursor: pointer
 
 .slider-group
   width: 100%
@@ -122,12 +123,6 @@ body
         font-size: 28px
         margin-left: 14px
     .slider
-      input[type='range']
-        width: 100%
-        height: 2px
-        background-color: #8A98A0
-        border: none
-        outline: none
       .range-values
         display: flex
         justify-content: space-between
@@ -248,3 +243,96 @@ body
 
 .divider
   height: 1px
+
+
+input[type=range]
+  appearance: none
+  -webkit-appearance: none
+  width: 100%
+  max-height: 3px
+  background-color: #0B64EB
+  border: none
+  outline: none
+
+input[type=range]::-webkit-slider-thumb
+  -webkit-appearance: none
+
+input[type=range]:focus
+  outline: none
+
+input[type=range]::-ms-track
+  width: 100%
+  cursor: pointer
+  background: transparent
+  border-color: transparent
+  color: transparent
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb
+  -webkit-appearance: none
+  border: 2px solid #0B64EB
+  height: 20px
+  width: 20px
+  border-radius: 50%
+  background: #ffffff
+  cursor: pointer
+  margin-top: -8px
+
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb
+  border: 2px solid #0B64EB
+  height: 20px
+  width: 20px
+  border-radius: 50%
+  background: #ffffff
+  cursor: pointer
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb
+  border: 2px solid #0B64EB
+  height: 20px
+  width: 20px
+  border-radius: 50%
+  background: #ffffff
+  cursor: pointer
+
+input[type=range]::-webkit-slider-runnable-track
+  width: 100%
+  height: 3px
+  cursor: pointer
+  background: #0B64EB
+  border-radius: 50%
+
+input[type=range]:focus::-webkit-slider-runnable-track
+  background: #0B64EB
+
+input[type=range]::-moz-range-track
+  width: 100%
+  height: 3px
+  cursor: pointer
+  background: #0B64EB
+  border-radius: 50%
+
+input[type=range]::-ms-track
+  width: 100%
+  height: 3px
+  cursor: pointer
+  background: transparent
+  border-color: transparent
+  //border-width: 16px 0
+  color: transparent
+
+input[type=range]::-ms-fill-lower
+  background: #0B64EB
+  border-radius: 50%
+
+input[type=range]:focus::-ms-fill-lower
+  background: #0B64EB
+
+input[type=range]::-ms-fill-upper
+  background: #0B64EB
+  border-radius: 50%
+
+input[type=range]:focus::-ms-fill-upper
+  background: #0B64EB
