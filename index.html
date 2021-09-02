@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/e745dc8655.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="js/scripts.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -42,7 +41,7 @@
                                 <span class="measure">%</span><span class="value">9.35</span>
                             </div>
                             <div class="slider">
-                                <input type="range" min="0.1" max="15" value="9.35" step="0.01">
+                                <input  type="range" min="0.1" max="15" value="9.35" step="0.01">
                                 <div class="range-values">
                                     <div class="minimal">0.1</div>
                                     <div class="maximal">15</div>
@@ -76,7 +75,13 @@
                             </div>
                             <div class="payment-amount incorrect">
                                 <input type="number" min="0" placeholder="0,00" step=".05" value="214.30">
-                                <span>The value is less than a least monthly payment <br /><a href="">Pay min amount</a></span>
+                                <div class="errorMessage">
+                                    The value is less than a least monthly payment
+                                </div>
+                                <div class="setValueLinks">
+                                    <a href="">Pay min amount</a>
+                                    <a href="">Close loan</a>
+                                </div>
                             </div>
 
                             <input type="button" class="submit-button" value="Submit payment">
@@ -182,6 +187,7 @@
 <!--            </div>-->
         </div>
         <div class="divider"></div>
+        <script type="text/javascript" src="js/scripts.js"></script>
     </div>
 
 </body>

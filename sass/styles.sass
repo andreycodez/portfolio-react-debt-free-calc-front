@@ -95,7 +95,6 @@ body
   font-weight: bold
   font-size: 16px
   width: max-content
-  margin-top: 30px
   cursor: pointer
 
 .slider-group
@@ -204,12 +203,12 @@ body
         border: none
         outline: none
         border-radius: 14px
-        padding: 0 30px
+        padding: 0 20px
         font-size: 16px
         color: #596B75
         box-shadow: 0px 10px 25px 0px rgba(0, 0, 150, .05)
-      input[type="button"]
-        margin-top: 30px
+    input[disabled]
+      background-color: #999999
     .payment-amount.incorrect
       display: flex
       flex-direction: column
@@ -217,12 +216,17 @@ body
         background-color: #FBE6EB
         color: #C2625F
         margin-bottom: 7px
-      span
+      .errorMessage
         font-size: 12px
         color: #C2625F
-        padding-left: 30px
-        a
-          color: #9965F5
+
+.setValueLinks
+  display: flex
+  gap: 20px
+  margin-top: 7px
+  a
+    font-size: 12px
+    color: #9965F5
 
 .payments-list
   .payments-table-heading
@@ -245,14 +249,17 @@ body
   height: 1px
 
 
+
+// Range sliders custom styling copy-pasted from CSS Tricks. Shame on me.
+
 input[type=range]
   appearance: none
   -webkit-appearance: none
   width: 100%
   max-height: 3px
-  background-color: #0B64EB
   border: none
   outline: none
+  border-radius: 50%
 
 input[type=range]::-webkit-slider-thumb
   -webkit-appearance: none
@@ -267,10 +274,9 @@ input[type=range]::-ms-track
   border-color: transparent
   color: transparent
 
-/* Special styling for WebKit/Blink */
 input[type=range]::-webkit-slider-thumb
   -webkit-appearance: none
-  border: 2px solid #0B64EB
+  border: 4px solid #0B64EB
   height: 20px
   width: 20px
   border-radius: 50%
@@ -278,19 +284,16 @@ input[type=range]::-webkit-slider-thumb
   cursor: pointer
   margin-top: -8px
 
-
-/* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb
-  border: 2px solid #0B64EB
-  height: 20px
-  width: 20px
+  border: 4px solid #0B64EB
+  height: 12px
+  width: 12px
   border-radius: 50%
   background: #ffffff
   cursor: pointer
 
-/* All the same stuff for IE */
 input[type=range]::-ms-thumb
-  border: 2px solid #0B64EB
+  border: 4px solid #0B64EB
   height: 20px
   width: 20px
   border-radius: 50%
@@ -301,18 +304,20 @@ input[type=range]::-webkit-slider-runnable-track
   width: 100%
   height: 3px
   cursor: pointer
-  background: #0B64EB
-  border-radius: 50%
+  background: #C6CAD1
+  border-radius: 2px
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d
+
 
 input[type=range]:focus::-webkit-slider-runnable-track
-  background: #0B64EB
+  background: #C6CAD1
 
 input[type=range]::-moz-range-track
   width: 100%
   height: 3px
   cursor: pointer
-  background: #0B64EB
-  border-radius: 50%
+  background: #C6CAD1
+  border-radius: 2px
 
 input[type=range]::-ms-track
   width: 100%
@@ -320,19 +325,22 @@ input[type=range]::-ms-track
   cursor: pointer
   background: transparent
   border-color: transparent
-  //border-width: 16px 0
   color: transparent
 
 input[type=range]::-ms-fill-lower
   background: #0B64EB
-  border-radius: 50%
+  border-radius: 2px
 
 input[type=range]:focus::-ms-fill-lower
   background: #0B64EB
 
 input[type=range]::-ms-fill-upper
-  background: #0B64EB
-  border-radius: 50%
+  background: #C6CAD1
+  border-radius: 2px
+
+input[type=range]::-moz-range-progress
+  background-color: #0B64EB
 
 input[type=range]:focus::-ms-fill-upper
-  background: #0B64EB
+  background: #C6CAD1
+
